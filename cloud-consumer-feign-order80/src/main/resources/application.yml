@@ -1,0 +1,18 @@
+server:
+  port: 80
+eureka:
+  client:
+    register-with-eureka: false #表示将自己注册进去服务端
+    fetch-registry: true #是否从eurekaServer抓取自己的注册信息 默认为true 单点无所谓。 集群必须设置为true才能配合ribbo使用负载均衡
+    service-url:
+      #      defaultZone: http://localhost:7001/eureka/ 单机版
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+ribbon:
+  #建立连接超时时间
+  ReadTimeout: 5000
+  #服务响应超时时间
+  ConnectTimeout: 5000
+logging:
+  level:
+    #feign日志以什么级别打印分别监视那个接口
+    com.atguigu.springcloud.service.PaymentService: debug

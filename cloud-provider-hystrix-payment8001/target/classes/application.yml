@@ -1,0 +1,18 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: cloud-hystrix-payment-service #服务名称
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource #当前数据源操作类型
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/cloud?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+    username: root
+    password: long
+eureka:
+  client:
+    register-with-eureka: true #表示将自己注册进去服务端
+    fetch-registry: true #是否从eurekaServer抓取自己的注册信息 默认为true 单点无所谓。 集群必须设置为true才能配合ribbo使用负载均衡
+    service-url:
+            defaultZone: http://localhost:7001/eureka/ #单机版
+#      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
