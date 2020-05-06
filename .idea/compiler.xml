@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="cloud-comsumerzk-order80" />
         <module name="cloud-provider-hystrix-payment8001" />
+        <module name="cloud-config-client3366" />
         <module name="cloud-config-center3344" />
         <module name="cloud-eureka-server7002" />
         <module name="cloud-eureka-server7001" />
@@ -20,6 +21,7 @@
         <module name="cloud-provider-payment8001" />
         <module name="cloud-consumer-feign-hystrix-order80" />
         <module name="cloud-consumer-feign-order80" />
+        <module name="cloud-config-client3355" />
         <module name="cloud-gateway-gateway9527" />
         <module name="cloud-comsumerzkzk-order80" />
         <module name="cloud-comsumerconsul-order80" />
